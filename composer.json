@@ -1,0 +1,20 @@
+{
+  "name": "linkphp/image",
+  "type": "library",
+  "description": "php image 图片",
+  "keywords": ["image","php image"],
+  "authors": [
+    {
+      "name": "liugene",
+      "email": "liujun2199@vip.qq.com"
+    }
+  ],
+  "require": {
+    "php": "^5.5 || ^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "linkphp\\image\\": "src"
+    }
+  }
+}
