@@ -1,8 +1,8 @@
 {
-  "name": "linkphp/image",
+  "name": "linkphp/curl",
   "type": "library",
-  "description": "php image 图片",
-  "keywords": ["image","php image"],
+  "description": "php curl",
+  "keywords": ["curl","php curl"],
   "authors": [
     {
       "name": "liugene",
@@ -14,7 +14,7 @@
   },
   "autoload": {
     "psr-4": {
-      "linkphp\\image\\": "src"
+      "linkphp\\curl\\": "src"
     }
   }
 }
