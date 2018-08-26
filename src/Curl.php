@@ -2,8 +2,6 @@
 
 namespace linkphp\curl;
 
-use framework\Exception;
-
 /**
  * 失败时再重试2次
  * $curl = new CUrl(2);
@@ -126,7 +124,7 @@ class Curl
      * @param array $data POST的数据
      * @param int $timeoutMs 超时设置，单位：毫秒
      * @return string 接口返回的内容，超时返回false
-     * @throws Exception
+     * @throws \Exception
      */
     protected function request($url, $data, $timeoutMs = 3000) {
         $options = array(
@@ -152,7 +150,7 @@ class Curl
         } while ($rs === FALSE && $curRetryTimes >= 0);
         $errno = curl_errno($ch);
         if ($errno) {
-            throw new Exception(sprintf("%s::%s(%d)\n", $url, curl_error($ch), $errno));
+            throw new \Exception(sprintf("%s::%s(%d)\n", $url, curl_error($ch), $errno));
         }
         //update cookie
         if ($this->hascookie) {
@@ -173,7 +171,7 @@ class Curl
     protected function getHeaders() {
         $arrHeaders = array();
         foreach ($this->header as $key => $val) {
-            $arrHeaders[] = $key . ': ' . $val;
+            $arrHeaders[] = $val;
         }
         return $arrHeaders;
     }
